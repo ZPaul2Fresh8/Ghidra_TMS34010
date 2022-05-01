@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<compiler_spec>
+    
+    <data_organization>
+        <absolute_max_alignment value="4" />
+        <machine_alignment value="2" />
+        <default_alignment value="2" />
+        <default_pointer_alignment value ="2" />
+        <pointer_size value ="4"/>
+        <wchar_size value="2"/>
+        <short_size value="2" />
+        <integer_size value="4" />
+
+        <size_alignment_map>
+            <entry size="2" alignment="2" />
+            <entry size="4" alignment="4" />
+        </size_alignment_map>
+    </data_organization>
+    
+	<global>
+	    <range space="rom"/>
+	    <range space="ram"/>
+	</global>
+
+    <readonly>
+        <range space="ram" first="0x01600000" last="0x160003f" />
+    </readonly>
+
+    <stackpointer register="SP" space="ram" />
+
+    <default_proto>
+        <prototype name="default" extrapop="0" stackshift="0" strategy="register">
+            <input>
+                
+                <pentry minsize="4" maxsize="4" align="4">
+                    <addr offset="0x0" space="register"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="SP"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A0"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A1"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A2"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A3"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A4"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A5"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A6"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A7"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A8"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A9"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A10"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A11"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A12"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A13"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="A14"/>
+                </pentry>
+                
+            </input>
+
+            <output>
+            </output>
+
+            <unaffected>
+                <register name="SP" />
+            </unaffected>
+
+        </prototype>
+    </default_proto>
+    
+</compiler_spec>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<processor_spec>
+	<programcounter register="PC"/>
+	
+	<data_space space ="rom" ptr_wordsize="4"/>
+	
+	<register_data>
+		<register name="SP"/>
+		<register name="ST"/>
+		<register name="A0"/>
+		<register name="A1"/>
+		<register name="A2"/>
+		<register name="A3"/>
+		<register name="A4"/>
+		<register name="A5"/>
+		<register name="A6"/>
+		<register name="A7"/>
+		<register name="A8"/>
+		<register name="A9"/>
+		<register name="A10"/>
+		<register name="A11"/>
+		<register name="A12"/>
+		<register name="A13"/>
+		<register name="A14"/>
+		<register name="B0"/>
+		<register name="B1"/>
+		<register name="B2"/>
+		<register name="B3"/>
+		<register name="B4"/>
+		<register name="B5"/>
+		<register name="B6"/>
+		<register name="B7"/>
+		<register name="B8"/>
+		<register name="B9"/>
+		<register name="B10"/>
+		<register name="B11"/>
+		<register name="B12"/>
+		<register name="B13"/>
+		<register name="B14"/>
+	</register_data>
+
+	<default_symbols>
+	   <symbol name="Start_MKII" address="rom:0x21f0" type="code" entry="true" />
+	   <!--<symbol name="Start_MKII" address="rom:0xff810f80" type="code" entry="true" />
+	   <symbol name="Start_MKII" address="rom:0xffffc" type="code_ptr" entry="true" />-->
+  	   <symbol name="Trap_00_Address_Reset" address="rom:0xFFFFFFC0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_01_External_Interrupt_1" address="rom:0xFFFFFFA0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_02_External_Interrupt_2" address="rom:0xFFFFFF80" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_03" address="rom:0xFFFFFF60" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_04" address="rom:0xFFFFFF40" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_05" address="rom:0xFFFFFF20" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_06" address="rom:0xFFFFFF00" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_07" address="rom:0xFFFFFEE0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_08_NonMaskable" address="rom:0xFFFFFEC0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_09_Host_Interrupt" address="rom:0xFFFFFEA0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_10_Display_Interrupt" address="rom:0xFFFFFE80" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_11_Window_Violation" address="rom:0xFFFFFE60" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_12" address="rom:0xFFFFFE40" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_13" address="rom:0xFFFFFE20" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_14" address="rom:0xFFFFFE00" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_15" address="rom:0xFFFFFDE0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_16" address="rom:0xFFFFFDC0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_17" address="rom:0xFFFFFDA0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_18" address="rom:0xFFFFFD80" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_19" address="rom:0xFFFFFD60" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_20" address="rom:0xFFFFFD40" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_21" address="rom:0xFFFFFD20" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_22" address="rom:0xFFFFFD00" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_23" address="rom:0xFFFFFCE0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_24" address="rom:0xFFFFFCC0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_25" address="rom:0xFFFFFCA0" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_26" address="rom:0xFFFFFC80" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_27" address="rom:0xFFFFFC60" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_28" address="rom:0xFFFFFC40" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_29" address="rom:0xFFFFFC20" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_30_Illegal_Opcode" address="rom:0xFFFFFC00" type="code_ptr" entry ="false" />
+   	   <symbol name="Trap_31" address="rom:0xFFFFFBE0" type="code_ptr" entry ="false" />
+	</default_symbols>
+
+	<default_memory_blocks>
+		<memory_block name="RAM" start_address="ram:0x0" length="0x013fffff" mode="rw" />
+		<!--<memory_block name="RAM_Scratch" start_address="ram:0x0" length="0x003fffff" mode="rw" />
+		<<memory_block name="RAM" start_address="ram:0x01000000" length="0x003fffff" mode="rw" />
+		<memory_block name="CMOS+-++" start_address="ram:0x01400000" length="0x1ffff" mode="rw" />
+		<memory_block name="midtunit_cmos_enable_w" start_address="ram:0x01480000" length="0x7ffff" mode="w" />
+		<memory_block name="INPUT_0" start_address="ram:0x01600000" length="0xf" mode="r" />
+		<memory_block name="INPUT_1" start_address="ram:0x01600010" length="0xf" mode="r" />
+		<memory_block name="INPUT_2" start_address="ram:0x01600020" length="0xf" mode="r" />
+		<memory_block name="INPUT_3" start_address="ram:0x01600030" length="0xf" mode="r" />
+		<memory_block name="midtunit_control_w" start_address="ram:0x01b00000" length="0x1f" mode="w" />
+		<memory_block name="midtunit_sound_state_r" start_address="ram:0x01d01020" length="0x1f" mode="r" />
+		<memory_block name="midtunit_sound_rw" start_address="ram:0x01d00000" length="0x1f" mode="r" />
+		<memory_block name="watchdog_reset16_w" start_address="ram:0x01d81060" length="0x1f" mode="w" />
+		<memory_block name="midtunit_control_w" start_address="ram:0x01f00000" length="0x1f" mode="w" />-->
+		<memory_block name="Graphic_Data" start_address="rom:0x02000000" length="0x07ffffff" mode="r" />
+		<memory_block name="Program_Data" start_address="rom:0xff800000" length="0x7fffff" mode="r" />
+	</default_memory_blocks>
+
+</processor_spec>

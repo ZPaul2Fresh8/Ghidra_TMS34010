@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<language_definitions>
+    <language processor="TMS 34010"
+              endian="little"
+              size="32"
+              variant="default"
+              version="1.0"
+              slafile="tms34010.sla"
+              processorspec="tms34010.pspec"
+              id="tms34010:LE:32:default">
+        <description>Texas Instruments 34010</description>
+        <compiler name="default" spec="tms34010.cspec" id="default"/>
+    </language>
+</language_definitions>
