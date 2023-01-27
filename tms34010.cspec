@@ -41,6 +41,10 @@
                     <register name="SP"/>
                 </pentry>
                 
+				<pentry minsize="4" maxsize="4">
+                    <register name="ST"/>
+                </pentry>
+                
                 <pentry minsize="4" maxsize="4">
                     <register name="A0"/>
                 </pentry>
@@ -99,6 +103,66 @@
                 
                 <pentry minsize="4" maxsize="4">
                     <register name="A14"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B0"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B1"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B2"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B3"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B4"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B5"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B6"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B7"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B8"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B9"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B10"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B11"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B12"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B13"/>
+                </pentry>
+                
+                <pentry minsize="4" maxsize="4">
+                    <register name="B14"/>
                 </pentry>
                 
             </input>
